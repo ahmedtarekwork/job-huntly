@@ -147,11 +147,11 @@
   }
 
   .btn-with-outer-border {
-    @apply relative mr-4;
+    @apply relative sm:mr-4;
   }
   .btn-with-outer-border::after {
     content: "";
-    @apply absolute top-0 h-full w-[1px] bg-border;
     left: calc(100% + 5px);
+    @apply absolute top-0 h-full w-[1px] bg-border max-sm:left-0 max-sm:top-full max-sm:h-[1px] max-sm:w-full;
   }
 }
