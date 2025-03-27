@@ -33,6 +33,8 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-text-1: var(--text-1);
+  --color-text-2: var(--text-2);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -58,10 +60,14 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent-1: oklch(69.71% 0.16874612021686872 246.46719395860552); /* #26A4FF */
+  --accent-1: oklch(
+    69.71% 0.16874612021686872 246.46719395860552
+  ); /* #26A4FF */
   --accent-2: oklch(82.88% 0.1575938796287773 77.4935308074795); /* #FFB836 */
   --accent-3: oklch(77.18% 0.117 172.58); /* #56CDAD */
-  --accent-4: oklch(69.98% 0.19178183728028667 30.338025709902254); /* #FF6550 */
+  --accent-4: oklch(
+    69.98% 0.19178183728028667 30.338025709902254
+  ); /* #FF6550 */
   --accent-5: oklch(60.57% 0.224 285.06); /* #7B61FF */
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -83,6 +89,48 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* container */
+  --container-max-width-sm: 640px;
+  --container-max-width-md: 768px;
+  --container-max-width-lg: 1024px;
+  --container-max-width-xl: 1280px;
+  --container-max-width-2xl: 1536px;
+}
+
+.container {
+  @apply mx-auto px-4;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-max-width-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-max-width-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-max-width-lg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-max-width-xl);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: var(--container-max-width-2xl);
+  }
 }
 
 @layer base {
@@ -91,5 +139,19 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .active-nav-link::before {
+    content: "";
+    @apply w-full h-1 bg-primary absolute top-full;
+  }
+
+  .btn-with-outer-border {
+    @apply relative mr-4;
+  }
+  .btn-with-outer-border::after {
+    content: "";
+    @apply absolute top-0 h-full w-[1px] bg-border;
+    left: calc(100% + 5px);
   }
 }
