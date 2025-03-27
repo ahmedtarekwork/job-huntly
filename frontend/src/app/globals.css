@@ -154,4 +154,8 @@
     left: calc(100% + 5px);
     @apply absolute top-0 h-full w-[1px] bg-border max-sm:left-0 max-sm:top-full max-sm:h-[1px] max-sm:w-full;
   }
+
+  .footer-social-icon {
+    @apply bg-white/10 size-9 rounded-full grid place-content-center;
+  }
 }
