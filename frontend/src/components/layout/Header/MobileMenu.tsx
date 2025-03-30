@@ -25,7 +25,7 @@ const MobileMenu = () => {
         >
           <DropdownMenuTrigger>
             <Image
-              src="burger-menu.svg"
+              src="icons/burger-menu.svg"
               alt="open menu"
               width={16.5}
               height={10}

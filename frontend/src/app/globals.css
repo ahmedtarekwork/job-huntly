@@ -3,6 +3,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("../../public/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("../../public/fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("../../public/fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -35,6 +45,7 @@
   --color-primary: var(--primary);
   --color-text-1: var(--text-1);
   --color-text-2: var(--text-2);
+  --color-accent-1: var(--accent-1);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
