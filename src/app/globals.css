@@ -169,4 +169,8 @@
   .footer-social-icon {
     @apply bg-white/10 size-9 rounded-full grid place-content-center;
   }
+
+  .checkbox-input:checked .checkbox-label div {
+    @apply bg-black;
+  }
 }
