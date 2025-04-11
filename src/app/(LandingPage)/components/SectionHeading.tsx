@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 // icons
-import { MoveRight } from "lucide-react";
+import { FaArrowRightLong  } from "react-icons/fa6";
 
 const SectionHeading = ({
   mainText,
@@ -24,7 +24,7 @@ const SectionHeading = ({
         className="text-primary flex gap-3 items-center flex-wrap font-[epilogue]"
         href="/find-jobs"
       >
-        Show all jobs <MoveRight />
+        Show all jobs <FaArrowRightLong />
       </Link>
     </div>
   );

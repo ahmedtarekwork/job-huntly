@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/select";
 
 // icons
-import { MapPin, Search } from "lucide-react";
+import { FiMapPin } from "react-icons/fi";
+import { FaSearch } from "react-icons/fa";
 
 const SearchJobInput = () => {
   return (
@@ -23,7 +24,7 @@ const SearchJobInput = () => {
       }}
     >
       <div className="flex items-center flex-1 gap-2">
-        <Search size={18} className="stroke-secondary" />
+        <FaSearch size={18} className="stroke-secondary" />
         <Input
           placeholder="Job title or keyword"
           className="border-t-0 border-x-0 rounded-b-none rounded-t-md shadow-none"
@@ -31,7 +32,7 @@ const SearchJobInput = () => {
       </div>
 
       <div className="flex items-center flex-1 gap-2">
-        <MapPin size={18} className="stroke-secondary" />
+        <FiMapPin size={18} className="stroke-secondary" />
         <Select>
           <SelectTrigger className="w-full border-t-0 border-x-0 shadow-none rounded-b-none rounded-t-md cursor-pointer">
             <SelectValue placeholder="Place" />

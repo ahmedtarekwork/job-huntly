@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 
 // icons
-import { Dribbble, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaDribbble, FaTwitter, FaLinkedinIn  } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -81,19 +81,19 @@ const Footer = () => {
 
           <ul className="flex gap-4 flex-wrap">
             <li className="footer-social-icon">
-              <Facebook size={18} />
+              <FaFacebookF size={18} />
             </li>
             <li className="footer-social-icon">
-              <Instagram size={18} />
+              <FaInstagram size={18} />
             </li>
             <li className="footer-social-icon">
-              <Dribbble size={18} />
+              <FaDribbble size={18} />
             </li>
             <li className="footer-social-icon">
-              <Linkedin size={18} />
+              <FaLinkedinIn size={18} />
             </li>
             <li className="footer-social-icon">
-              <Twitter size={18} />
+              <FaTwitter size={18} />
             </li>
           </ul>
         </div>

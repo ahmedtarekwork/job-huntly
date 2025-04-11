@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // icons
-import { MoveRight } from "lucide-react";
+import { FaArrowRightLong  } from "react-icons/fa6";
 
 // types
 import type { TCategory } from "@/lib/types";
@@ -25,7 +25,7 @@ const JobCategoryCard = ({ icon, name, available }: Omit<TCategory, "id">) => {
         href="/find-jobs"
         className="pl-0 p-1.5 w-fit flex gap-4 text-text-1 flex-wrap group-hover:text-white transition duration-200"
       >
-        {available} jobs available <MoveRight />
+        {available} jobs available <FaArrowRightLong />
       </Link>
     </li>
   );
